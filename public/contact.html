@@ -1,11 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salt & Shore</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Salt & Shore</title>
+  <link rel="stylesheet" href="../styles/main.css" />
 </head>
 <body>
-    
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Salt & Shore</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurant.html">Menu</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="contact-hero">
+    <div class="hero-content">
+      <h1>Find Us</h1>
+      <p>We'd love to have you. Come on down to the shore.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO ROW -->
+  <section id="contact-info">
+    <div class="container info-grid">
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <h3>Phone</h3>
+        <p>+254 700 000 000</p>
+        <p>+254 711 000 000</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <h3>Email</h3>
+        <p>hello@saltnshore.com</p>
+        <p>reservations@saltnshore.com</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <h3>Location</h3>
+        <p>Beachfront Road, Nyali</p>
+        <p>Mombasa, Kenya</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENING HOURS -->
+  <section id="opening-hours" class="alt-bg">
+    <div class="container">
+      <h2>Opening Hours</h2>
+      <div class="hours-grid">
+        <div class="hours-row">
+          <span class="day">Monday – Thursday</span>
+          <span class="time">11:00 AM – 10:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Friday – Saturday</span>
+          <span class="time">10:00 AM – 11:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Sunday</span>
+          <span class="time">10:00 AM – 9:00 PM</span>
+        </div>
+        <div class="hours-row highlight">
+          <span class="day">Public Holidays</span>
+          <span class="time">10:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMS ROW -->
+  <section id="forms">
+    <div class="container forms-grid">
+
+      <!-- RESERVATION FORM -->
+      <div class="form-block">
+        <h2>Make a Reservation</h2>
+        <p>Book your table and we'll have everything ready for you.</p>
+        <form class="reservation-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="res-name">Full Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="res-email">Email Address</label>
+            <input type="email" id="res-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="res-phone">Phone Number</label>
+            <input type="tel" id="res-phone" name="phone" placeholder="+254 700 000 000" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Date</label>
+              <input type="date" id="res-date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="res-time">Time</label>
+              <input type="time" id="res-time" name="time" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" name="guests" required>
+              <option value="" disabled selected>Select guests</option>
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7+">7+ people</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="res-notes">Special Requests</label>
+            <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+          </div>
+          <button type="submit" class="btn">Reserve My Table</button>
+        </form>
+      </div>
+
+      <!-- GENERAL ENQUIRY FORM -->
+      <div class="form-block">
+        <h2>General Enquiry</h2>
+        <p>Got a question? We're happy to help.</p>
+        <form class="enquiry-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="enq-name">Full Name</label>
+            <input type="text" id="enq-name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="enq-email">Email Address</label>
+            <input type="email" id="enq-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="enq-subject">Subject</label>
+            <input type="text" id="enq-subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="enq-message">Message</label>
+            <textarea id="enq-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="enq-hear">How did you hear about us?</label>
+            <select id="enq-hear" name="hear">
+              <option value="" disabled selected>Select an option</option>
+              <option value="social">Social Media</option>
+              <option value="friend">Friend or Family</option>
+              <option value="google">Google Search</option>
+              <option value="tripadvisor">TripAdvisor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP EMBED -->
+  <section id="map">
+    <div class="container">
+      <h2>Where to Find Us</h2>
+      <div class="map-wrapper">
+        <!-- Replace src with your actual Google Maps embed URL -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.8!2d39.7!3d-4.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDMnMDAuMCJTIDM5wrA0MicwMC4wIkU!5e0!3m2!1sen!2ske!4v1234567890"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Salt and Shore Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Salt & Shore. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
