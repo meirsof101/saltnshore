@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Salt & Shore</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Salt & Shore</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurant.html">Menu</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="gallery-hero">
+    <div class="hero-content">
+      <h1>Gallery</h1>
+      <p>A glimpse into life at Salt & Shore.</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section id="gallery-section">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="food">Food & Drinks</button>
+        <button class="filter-btn" data-filter="events">Beach Parties</button>
+        <button class="filter-btn" data-filter="venue">The Venue</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="venue">
+          <img src="../assets/gallery/venue-1.jpg" alt="Salt and Shore venue" />
+          <div class="gallery-overlay"><span>The Venue</span></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <img src="../assets/gallery/food-1.jpg" alt="Grilled catch of the day" />
+          <div class="gallery-overlay"><span>Grilled Catch</span></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="../assets/gallery/beach-party.jpg" alt="Beach party Monday" />
+          <div class="gallery-overlay"><span>Beach Party</span></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <img src="../assets/gallery/food-2.jpg" alt="Coconut prawn skewers" />
+          <div class="gallery-overlay"><span>Prawn Skewers</span></div>
+        </div>
+        <div class="gallery-item" data-category="venue">
+          <img src="../assets/gallery/venue-2.jpg" alt="Beachfront dining" />
+          <div class="gallery-overlay"><span>Beachfront Dining</span></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="../assets/gallery/events-2.jpg" alt="DJ night at Salt and Shore" />
+          <div class="gallery-overlay"><span>DJ Night</span></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <img src="../assets/gallery/drinks-1.jpg" alt="Sunset mocktail" />
+          <div class="gallery-overlay"><span>Sunset Mocktail</span></div>
+        </div>
+        <div class="gallery-item" data-category="venue">
+          <img src="../assets/gallery/venue-3.jpg" alt="Salt and Shore at sunset" />
+          <div class="gallery-overlay"><span>Sunset Views</span></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="../assets/gallery/events-3.jpg" alt="Crowd at beach party" />
+          <div class="gallery-overlay"><span>Monday Vibes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Salt & Shore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
