@@ -1,0 +1,801 @@
+/* ============================================
+   SALT & SHORE — main.css
+   ============================================ */
+
+/* FONTS */
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/Jost-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/Jost-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/Jost-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/Jost-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* ============================================
+     RESET & BASE
+     ============================================ */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #f5f0e8;
+    color: #3b3b3b;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* ============================================
+     CSS VARIABLES
+     ============================================ */
+  :root {
+    --green-dark:    #4a5e3a;
+    --green-mid:     #7a8c6e;
+    --green-light:   #b5c4a1;
+    --cream:         #f5f0e8;
+    --sand:          #e8dfc8;
+    --driftwood:     #c4a46b;
+    --text-dark:     #2e2e2e;
+    --text-mid:      #5a5a5a;
+    --text-light:    #8a8a8a;
+    --white:         #ffffff;
+  
+    --nav-height:    70px;
+    --section-pad:   5rem 1.5rem;
+    --container-max: 1100px;
+    --radius:        8px;
+    --radius-lg:     14px;
+    --transition:    0.3s ease;
+  }
+  
+  /* ============================================
+     UTILITY
+     ============================================ */
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .section-sub {
+    color: var(--text-mid);
+    font-size: 15px;
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .alt-bg {
+    background-color: var(--sand);
+  }
+  
+  /* ============================================
+     BUTTONS
+     ============================================ */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--green-dark);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    border: 2px solid var(--green-dark);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+  }
+  
+  .btn:hover {
+    background-color: transparent;
+    color: var(--green-dark);
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.65rem 1.75rem;
+    background-color: transparent;
+    color: var(--green-dark);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    border: 2px solid var(--green-dark);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--green-dark);
+    color: var(--cream);
+  }
+  
+  /* ============================================
+     NAVIGATION
+     ============================================ */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(245, 240, 232, 0.95);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    z-index: 100;
+    border-bottom: 1px solid var(--sand);
+  }
+  
+  .logo a {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  nav ul li a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    transition: color var(--transition);
+  }
+  
+  nav ul li a:hover {
+    color: var(--green-dark);
+  }
+  
+  /* ============================================
+     HERO SECTIONS
+     ============================================ */
+  #hero,
+  #menu-hero,
+  #contact-hero,
+  #story-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--nav-height) 1.5rem 0;
+    background-color: var(--cream);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  #menu-hero,
+  #contact-hero,
+  #story-hero {
+    min-height: 50vh;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--green-dark);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-mid);
+    margin-bottom: 2rem;
+  }
+  
+  /* ============================================
+     SECTIONS — GENERAL
+     ============================================ */
+  section {
+    padding: var(--section-pad);
+  }
+  
+  section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ============================================
+     ABOUT TEASER
+     ============================================ */
+  #about-teaser {
+    text-align: center;
+    background-color: var(--white);
+  }
+  
+  #about-teaser p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-mid);
+    font-size: 16px;
+  }
+  
+  /* ============================================
+     MENU HIGHLIGHT & MENU GRID
+     ============================================ */
+  #menu-highlight {
+    background-color: var(--cream);
+    text-align: center;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .menu-card {
+    background-color: var(--white);
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(74, 94, 58, 0.1);
+  }
+  
+  .menu-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-card p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  
+  .menu-section {
+    padding: var(--section-pad);
+  }
+  
+  .menu-section h2 {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* ============================================
+     TESTIMONIALS
+     ============================================ */
+  #testimonials {
+    background-color: var(--sand);
+    text-align: center;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  blockquote {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    border-left: 4px solid var(--green-light);
+    text-align: left;
+  }
+  
+  blockquote p {
+    font-size: 15px;
+    color: var(--text-mid);
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  blockquote cite {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--green-dark);
+    letter-spacing: 0.05em;
+  }
+  
+  /* ============================================
+     CTA SECTION
+     ============================================ */
+  #cta,
+  #story-cta {
+    background-color: var(--green-dark);
+    text-align: center;
+    padding: 5rem 1.5rem;
+  }
+  
+  #cta h2,
+  #story-cta h2 {
+    color: var(--cream);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+  }
+  
+  #cta p,
+  #story-cta p {
+    color: var(--green-light);
+    margin: 1rem auto 2rem;
+    max-width: 500px;
+  }
+  
+  #cta .btn,
+  #story-cta .btn {
+    background-color: var(--cream);
+    color: var(--green-dark);
+    border-color: var(--cream);
+  }
+  
+  #cta .btn:hover,
+  #story-cta .btn:hover {
+    background-color: transparent;
+    color: var(--cream);
+  }
+  
+  /* ============================================
+     STORY PAGE — SPLIT SECTIONS
+     ============================================ */
+  .story-section {
+    padding: var(--section-pad);
+  }
+  
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .split.reverse .split-image {
+    order: 2;
+  }
+  
+  .split.reverse .split-text {
+    order: 1;
+  }
+  
+  .split-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+  }
+  
+  .split-text h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .split-text p {
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+    font-size: 15px;
+  }
+  
+  .values-list {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .values-list li {
+    font-size: 14px;
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+  
+  /* ============================================
+     AWARDS
+     ============================================ */
+  #awards {
+    text-align: center;
+  }
+  
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .award-card {
+    background-color: var(--white);
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+  }
+  
+  .award-icon {
+    font-size: 28px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .award-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green-dark);
+    margin-bottom: 0.4rem;
+  }
+  
+  .award-card p {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  
+  /* ============================================
+     CONTACT PAGE
+     ============================================ */
+  #contact-info {
+    background-color: var(--white);
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .info-card {
+    padding: 2rem 1rem;
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-lg);
+  }
+  
+  .info-icon {
+    font-size: 24px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .info-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-card p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+  
+  /* OPENING HOURS */
+  #opening-hours {
+    text-align: center;
+  }
+  
+  .hours-grid {
+    max-width: 500px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    font-size: 14px;
+  }
+  
+  .hours-row .day {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+  
+  .hours-row .time {
+    color: var(--text-mid);
+  }
+  
+  .hours-row.highlight {
+    border-left: 3px solid var(--driftwood);
+  }
+  
+  /* FORMS */
+  #forms {
+    background-color: var(--cream);
+  }
+  
+  .forms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .form-block h2 {
+    margin-bottom: 0.4rem;
+  }
+  
+  .form-block p {
+    color: var(--text-mid);
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: 0.04em;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--sand);
+    border-radius: var(--radius);
+    background-color: var(--white);
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--green-mid);
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* MAP */
+  #map {
+    background-color: var(--white);
+    text-align: center;
+  }
+  
+  #map h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .map-wrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--sand);
+  }
+  
+  /* ============================================
+     FOOTER
+     ============================================ */
+  footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  /* ============================================
+   BEACH PARTY SECTION
+   ============================================ */
+#beach-party {
+    background-color: var(--green-dark);
+    padding: var(--section-pad);
+  }
+  
+  .beach-party-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .event-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    background-color: var(--driftwood);
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  #beach-party h2 {
+    color: var(--cream);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  
+  #beach-party p {
+    color: var(--green-light);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .event-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .event-details li {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cream);
+  }
+  
+  .beach-party-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+  }
+  
+  #beach-party .btn {
+    background-color: var(--driftwood);
+    border-color: var(--driftwood);
+    color: var(--white);
+  }
+  
+  #beach-party .btn:hover {
+    background-color: transparent;
+    color: var(--driftwood);
+  }
+  
+  /* Beach party responsive */
+  @media (max-width: 768px) {
+    .beach-party-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .beach-party-image img {
+      height: 260px;
+    }
+  }
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 1.25rem;
+    }
+  
+    nav ul {
+      gap: 1.25rem;
+    }
+  
+    nav ul li a {
+      font-size: 12px;
+    }
+  
+    .split,
+    .forms-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .split.reverse .split-image,
+    .split.reverse .split-text {
+      order: unset;
+    }
+  
+    .split-image img {
+      height: 260px;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    #hero {
+      min-height: 90vh;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav ul {
+      gap: 0.75rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .menu-grid,
+    .testimonial-grid,
+    .awards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
