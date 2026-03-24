@@ -459,44 +459,315 @@
   .menu-section h2 {
     margin-bottom: 0.25rem;
   }
-  
   /* ============================================
-     TESTIMONIALS
-     ============================================ */
-  #testimonials {
-    background-color: var(--sand);
+   FLOATING COUNTDOWN
+   ============================================ */
+.floating-countdown {
+  position: fixed;
+  top: calc(var(--nav-height) + 1rem);
+  right: 1.5rem;
+  z-index: 999;
+  background-color: var(--green-dark);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem;
+  min-width: 220px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.floating-countdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.floating-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--driftwood);
+}
+
+.floating-toggle {
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.floating-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.floating-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+  min-width: 42px;
+}
+
+.floating-item span {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.floating-item label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-light);
+  margin-top: 3px;
+}
+
+.floating-sep {
+  font-size: 1rem;
+  color: var(--green-light);
+  margin-bottom: 0.8rem;
+}
+
+.floating-btn {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: var(--driftwood);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: opacity var(--transition);
+}
+
+.floating-btn:hover {
+  opacity: 0.85;
+}
+
+/* ============================================
+   GOOGLE-STYLE REVIEWS
+   ============================================ */
+#reviews {
+  background-color: var(--white);
+  padding: var(--section-pad);
+}
+
+#reviews h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.reviews-summary {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.summary-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.score-number {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--green-dark);
+  line-height: 1;
+}
+
+.score-stars {
+  font-size: 20px;
+  color: var(--driftwood);
+  margin: 0.4rem 0;
+  letter-spacing: 2px;
+}
+
+.score-count {
+  font-size: 12px;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.summary-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.bar-row span {
+  min-width: 28px;
+  text-align: right;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background-color: var(--sand);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: var(--driftwood);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.review-card {
+  background-color: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.reviewer-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--green-dark);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.reviewer-date {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.review-stars {
+  font-size: 16px;
+  color: var(--driftwood);
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.review-text {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* REVIEW FORM */
+.review-form-block {
+  background-color: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  border: 1px solid var(--sand);
+}
+
+.review-form-block h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--green-dark);
+  margin-bottom: 0.4rem;
+}
+
+.review-form-block > p {
+  font-size: 14px;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+.star-picker {
+  display: flex;
+  gap: 4px;
+  font-size: 28px;
+  color: var(--sand);
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.star-picker span.active {
+  color: var(--driftwood);
+}
+
+.star-picker span:hover {
+  color: var(--driftwood);
+}
+
+.review-note {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Reviews responsive */
+@media (max-width: 768px) {
+  .reviews-summary {
+    flex-direction: column;
+    gap: 1.5rem;
     text-align: center;
   }
-  
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+
+  .bar-row {
+    font-size: 12px;
   }
-  
-  blockquote {
-    background-color: var(--white);
-    border-radius: var(--radius-lg);
-    padding: 1.75rem;
-    border-left: 4px solid var(--green-light);
-    text-align: left;
+
+  .floating-countdown {
+    min-width: 180px;
+    right: 1rem;
   }
-  
-  blockquote p {
-    font-size: 15px;
-    color: var(--text-mid);
-    font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
-  
-  blockquote cite {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--green-dark);
-    letter-spacing: 0.05em;
-  }
+}
   
   /* ============================================
      CTA SECTION

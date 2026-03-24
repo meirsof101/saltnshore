@@ -269,7 +269,7 @@
     return next;
   }
 
-  function updateCountdowns() {
+function updateCountdowns() {
     const now = new Date();
     const diff = getNextMonday() - now;
     const pad = n => String(Math.max(0, n)).padStart(2, '0');
@@ -285,21 +285,16 @@
     document.getElementById('p-minutes').textContent = pad(minutes);
     document.getElementById('p-seconds').textContent = pad(seconds);
 
-    // CTA section
-    document.getElementById('r-days').textContent    = pad(days);
-    document.getElementById('r-hours').textContent   = pad(hours);
-    document.getElementById('r-minutes').textContent = pad(minutes);
-    document.getElementById('r-seconds').textContent = pad(seconds);
-
     // Floating widget
     document.getElementById('f-days').textContent    = pad(days);
     document.getElementById('f-hours').textContent   = pad(hours);
     document.getElementById('f-minutes').textContent = pad(minutes);
     document.getElementById('f-seconds').textContent = pad(seconds);
   }
+updateCountdowns();
+setInterval(updateCountdowns, 1000);  
 
-  updateCountdowns();
-  setInterval(updateCountdowns, 1000);
+ 
 
   // ============================================
   // FLOATING COUNTDOWN — toggle minimize
