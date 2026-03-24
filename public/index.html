@@ -32,77 +32,182 @@
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
+  <!-- ABOUT TEASER — image right, text left -->
   <section id="about-teaser">
-    <div class="container">
-      <h2>Our Story</h2>
-      <p>Born from a love of the sea and a passion for honest cooking, Salt & Shore brings the finest coastal flavors to your plate.</p>
-      <a href="story.html" class="btn-secondary">Read More</a>
-    </div>
-  </section>
-
-  <!-- MENU HIGHLIGHT -->
-  <section id="menu-highlight">
-    <div class="container">
-      <h2>What We're Known For</h2>
-      <div class="menu-cards">
-        <div class="card">
-          <h3>Grilled Catch of the Day</h3>
-          <p>Freshly sourced, simply prepared.</p>
-        </div>
-        <div class="card">
-          <h3>Coconut Prawn Skewers</h3>
-          <p>A house favourite since day one.</p>
-        </div>
-        <div class="card">
-          <h3>Sunset Mocktail</h3>
-          <p>Tropical flavours, beachside vibes.</p>
-        </div>
+    <div class="container split">
+      <div class="split-text">
+        <h2>Our Story</h2>
+        <p>Born from a love of the sea and a passion for honest cooking, Salt & Shore brings the finest coastal flavours to your plate. Every dish tells a story of the Kenyan coast.</p>
+        <a href="story.html" class="btn-secondary">Read Our Story</a>
       </div>
-      <a href="restaurant.html" class="btn-secondary">Full Menu</a>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Our Guests Say</h2>
-      <div class="testimonial-grid">
-        <blockquote>
-          <p>"Best seafood I've had on the coast. The view alone is worth the trip."</p>
-          <cite>— Sarah M.</cite>
-        </blockquote>
-        <blockquote>
-          <p>"A hidden gem. The ambiance, the food, the staff — all perfect."</p>
-          <cite>— James K.</cite>
-        </blockquote>
-        <blockquote>
-          <p>"We come back every time we visit. Salt & Shore never disappoints."</p>
-          <cite>— Amina T.</cite>
-        </blockquote>
+      <div class="split-image">
+        <img src="../assets/entrance.jpeg" alt="Salt and Shore entrance" />
       </div>
     </div>
   </section>
-<!-- BEACH PARTY EVENT -->
-<section id="beach-party">
-  <div class="container beach-party-inner">
-    <div class="beach-party-text">
-      <div class="event-label">Every Monday</div>
-      <h2>Beach Party Nights</h2>
-      <p>As the sun sets every Monday, Salt & Shore comes alive. Join us for a night of good music, cold drinks, fresh food and sand between your toes. Whether you're a local or just passing through — Monday nights are not to be missed.</p>
-      <ul class="event-details">
-        <li>📍 Right on the beachfront</li>
-        <li>🕕 Starts 6:00 PM</li>
-        <li>🎶 Live music & DJ sets</li>
-        <li>🍹 Special cocktail menu</li>
-      </ul>
-      <a href="contact.html" class="btn">Reserve Your Spot</a>
+
+  <!-- MENU SECTION — image left, text right -->
+  <section id="home-menu">
+    <div class="container split">
+      <div class="split-image">
+        <img src="../assets/menu.jpeg" alt="Salt and Shore menu" />
+      </div>
+      <div class="split-text">
+        <div class="event-label">What We Serve</div>
+        <h2>Fresh From the Ocean</h2>
+        <p>From grilled catch of the day to coconut prawn skewers, our menu is built around the sea. Every ingredient is sourced fresh, every dish prepared with care.</p>
+        <div class="home-menu-cards">
+          <div class="home-menu-item">
+            <img src="../assets/salt1.jpeg" alt="Grilled Catch" />
+            <span>Grilled Catch of the Day</span>
+          </div>
+          <div class="home-menu-item">
+            <img src="../assets/salt2.jpeg" alt="Coconut Prawns" />
+            <span>Coconut Prawn Skewers</span>
+          </div>
+          <div class="home-menu-item">
+            <img src="../assets/salt3.jpeg" alt="Sunset Mocktail" />
+            <span>Sunset Mocktail</span>
+          </div>
+        </div>
+        <a href="restaurant.html" class="btn">View Full Menu</a>
+      </div>
     </div>
-    <div class="beach-party-image">
-      <img src="../assets/gallery/beach-party.jpg" alt="Beach Party Mondays at Salt and Shore" />
+  </section>
+
+  <!-- BEACH PARTY EVENT — text left, image right -->
+  <section id="beach-party">
+    <div class="container beach-party-inner">
+      <div class="beach-party-text">
+        <div class="event-label">Every Monday</div>
+        <h2>Beach Party Nights</h2>
+        <p>As the sun sets every Monday, Salt & Shore comes alive. Join us for a night of good music, cold drinks, fresh food and sand between your toes.</p>
+        <ul class="event-details">
+          <li>📍 Right on the beachfront</li>
+          <li>🕕 Starts 6:00 PM</li>
+          <li>🎶 Live music & DJ sets</li>
+          <li>🍹 Special cocktail menu</li>
+        </ul>
+        <!-- BEACH PARTY COUNTDOWN -->
+        <div class="countdown countdown-party" id="partyCountdown">
+          <div class="countdown-item">
+            <span id="p-days">00</span>
+            <label>Days</label>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span id="p-hours">00</span>
+            <label>Hours</label>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span id="p-minutes">00</span>
+            <label>Mins</label>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span id="p-seconds">00</span>
+            <label>Secs</label>
+          </div>
+        </div>
+        <a href="contact.html" class="btn">Reserve Your Spot</a>
+      </div>
+      <div class="beach-party-image">
+        <img src="../assets/karl.jpeg" alt="Beach Party Mondays at Salt and Shore" />
+      </div>
     </div>
+  </section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+
+    <!-- RATING SUMMARY -->
+    <div class="reviews-summary">
+      <div class="summary-score">
+        <span class="score-number" id="avgScore">4.8</span>
+        <div class="score-stars" id="summaryStars">★★★★★</div>
+        <span class="score-count" id="reviewCount">Based on 3 reviews</span>
+      </div>
+      <div class="summary-bars">
+        <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" id="bar5" style="width:80%"></div></div></div>
+        <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" id="bar4" style="width:15%"></div></div></div>
+        <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" id="bar3" style="width:5%"></div></div></div>
+        <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" id="bar2" style="width:0%"></div></div></div>
+        <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" id="bar1" style="width:0%"></div></div></div>
+      </div>
+    </div>
+
+    <!-- REVIEW CARDS -->
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">SM</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">Sarah M.</span>
+            <span class="reviewer-date">March 2026</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best seafood I've had on the coast. The view alone is worth the trip."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">JK</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">James K.</span>
+            <span class="reviewer-date">February 2026</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"A hidden gem. The ambiance, the food, the staff — all perfect."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">AT</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">Amina T.</span>
+            <span class="reviewer-date">January 2026</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"We come back every time we visit. Salt & Shore never disappoints."</p>
+      </div>
+    </div>
+
+    <!-- LEAVE A REVIEW FORM -->
+    <div class="review-form-block">
+      <h3>Leave a Review</h3>
+      <p>Dined with us recently? We'd love to hear from you.</p>
+      <div class="review-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rv-name">Your Name</label>
+            <input type="text" id="rv-name" placeholder="e.g. John M." />
+          </div>
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-picker" id="starPicker">
+              <span data-val="1">★</span>
+              <span data-val="2">★</span>
+              <span data-val="3">★</span>
+              <span data-val="4">★</span>
+              <span data-val="5">★</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="rv-text">Your Review</label>
+          <textarea id="rv-text" rows="3" placeholder="Tell us about your experience..."></textarea>
+        </div>
+        <button class="btn" id="submitReview">Submit Review</button>
+        <p class="review-note">⚠ Reviews currently save in this session only. Full database integration coming soon.</p>
+      </div>
+    </div>
+
   </div>
 </section>
+
   <!-- RESERVATIONS CTA -->
   <section id="cta">
     <div class="container">
@@ -118,5 +223,189 @@
   </footer>
 
   <script src="../js/main.js"></script>
+ 
+<!-- FLOATING COUNTDOWN -->
+<div class="floating-countdown" id="floatingCountdown">
+  <div class="floating-countdown-header">
+    <span class="floating-label">Next Beach Party</span>
+    <button class="floating-toggle" id="floatingToggle">−</button>
+  </div>
+  <div class="floating-body" id="floatingBody">
+    <div class="floating-timer">
+      <div class="floating-item">
+        <span id="f-days">00</span>
+        <label>Days</label>
+      </div>
+      <div class="floating-sep">:</div>
+      <div class="floating-item">
+        <span id="f-hours">00</span>
+        <label>Hrs</label>
+      </div>
+      <div class="floating-sep">:</div>
+      <div class="floating-item">
+        <span id="f-minutes">00</span>
+        <label>Mins</label>
+      </div>
+      <div class="floating-sep">:</div>
+      <div class="floating-item">
+        <span id="f-seconds">00</span>
+        <label>Secs</label>
+      </div>
+    </div>
+    <a href="contact.html" class="floating-btn">Reserve a Table</a>
+  </div>
+</div>
+<script>
+  // ============================================
+  // COUNTDOWN — shared function
+  // ============================================
+  function getNextMonday() {
+    const now = new Date();
+    const day = now.getDay();
+    const daysUntilMonday = (1 - day + 7) % 7 || 7;
+    const next = new Date(now);
+    next.setDate(now.getDate() + daysUntilMonday);
+    next.setHours(18, 0, 0, 0);
+    return next;
+  }
+
+  function updateCountdowns() {
+    const now = new Date();
+    const diff = getNextMonday() - now;
+    const pad = n => String(Math.max(0, n)).padStart(2, '0');
+
+    const days    = Math.floor(diff / 86400000);
+    const hours   = Math.floor((diff % 86400000) / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+
+    // Beach party section
+    document.getElementById('p-days').textContent    = pad(days);
+    document.getElementById('p-hours').textContent   = pad(hours);
+    document.getElementById('p-minutes').textContent = pad(minutes);
+    document.getElementById('p-seconds').textContent = pad(seconds);
+
+    // CTA section
+    document.getElementById('r-days').textContent    = pad(days);
+    document.getElementById('r-hours').textContent   = pad(hours);
+    document.getElementById('r-minutes').textContent = pad(minutes);
+    document.getElementById('r-seconds').textContent = pad(seconds);
+
+    // Floating widget
+    document.getElementById('f-days').textContent    = pad(days);
+    document.getElementById('f-hours').textContent   = pad(hours);
+    document.getElementById('f-minutes').textContent = pad(minutes);
+    document.getElementById('f-seconds').textContent = pad(seconds);
+  }
+
+  updateCountdowns();
+  setInterval(updateCountdowns, 1000);
+
+  // ============================================
+  // FLOATING COUNTDOWN — toggle minimize
+  // ============================================
+  const floatingToggle = document.getElementById('floatingToggle');
+  const floatingBody   = document.getElementById('floatingBody');
+
+  floatingToggle.addEventListener('click', () => {
+    const isHidden = floatingBody.style.display === 'none';
+    floatingBody.style.display = isHidden ? 'block' : 'none';
+    floatingToggle.textContent = isHidden ? '−' : '+';
+  });
+
+  // ============================================
+  // REVIEWS — star picker + submit
+  // ============================================
+  let selectedRating = 0;
+  const stars = document.querySelectorAll('#starPicker span');
+
+  stars.forEach(star => {
+    star.addEventListener('mouseover', () => {
+      stars.forEach(s => s.classList.remove('active'));
+      for (let i = 0; i < star.dataset.val; i++) stars[i].classList.add('active');
+    });
+    star.addEventListener('mouseout', () => {
+      stars.forEach((s, i) => {
+        s.classList.toggle('active', i < selectedRating);
+      });
+    });
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.dataset.val);
+      stars.forEach((s, i) => {
+        s.classList.toggle('active', i < selectedRating);
+      });
+    });
+  });
+
+  // Static reviews data — swap for API call later
+  let reviews = [
+    { name: 'Sarah M.', rating: 5, text: 'Best seafood I\'ve had on the coast. The view alone is worth the trip.', date: 'March 2026' },
+    { name: 'James K.', rating: 5, text: 'A hidden gem. The ambiance, the food, the staff — all perfect.', date: 'February 2026' },
+    { name: 'Amina T.', rating: 4, text: 'We come back every time we visit. Salt & Shore never disappoints.', date: 'January 2026' },
+  ];
+
+  function getInitials(name) {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();
+  }
+
+  function getMonthYear() {
+    return new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+  }
+
+  function renderStars(rating) {
+    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+  }
+
+  function updateSummary() {
+    const avg = (reviews.reduce((a, b) => a + b.rating, 0) / reviews.length).toFixed(1);
+    document.getElementById('avgScore').textContent = avg;
+    document.getElementById('reviewCount').textContent = `Based on ${reviews.length} review${reviews.length !== 1 ? 's' : ''}`;
+
+    const counts = [0, 0, 0, 0, 0];
+    reviews.forEach(r => counts[r.rating - 1]++);
+    [1,2,3,4,5].forEach(n => {
+      const pct = reviews.length ? Math.round((counts[n-1] / reviews.length) * 100) : 0;
+      document.getElementById(`bar${n}`).style.width = pct + '%';
+    });
+  }
+
+  function renderReviews() {
+    const grid = document.getElementById('reviewsGrid');
+    grid.innerHTML = reviews.map(r => `
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">${getInitials(r.name)}</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">${r.name}</span>
+            <span class="reviewer-date">${r.date}</span>
+          </div>
+        </div>
+        <div class="review-stars">${renderStars(r.rating)}</div>
+        <p class="review-text">"${r.text}"</p>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('submitReview').addEventListener('click', () => {
+    const name = document.getElementById('rv-name').value.trim();
+    const text = document.getElementById('rv-text').value.trim();
+
+    if (!name) { alert('Please enter your name.'); return; }
+    if (!selectedRating) { alert('Please select a star rating.'); return; }
+    if (!text) { alert('Please write a short review.'); return; }
+
+    reviews.unshift({ name, rating: selectedRating, text, date: getMonthYear() });
+
+    document.getElementById('rv-name').value = '';
+    document.getElementById('rv-text').value = '';
+    selectedRating = 0;
+    stars.forEach(s => s.classList.remove('active'));
+
+    renderReviews();
+    updateSummary();
+  });
+
+  updateSummary();
+</script>
 </body>
 </html>
