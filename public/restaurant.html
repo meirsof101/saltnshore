@@ -9,9 +9,9 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav>
+  <nav class="nav-dark">
     <div class="logo">
-      <a href="index.html">Salt & Shore</a>
+      <a href="index.html">Salt & Shore <span>Restaurant</span></a>
     </div>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -23,11 +23,20 @@
     </ul>
   </nav>
 
-  <!-- PAGE HERO -->
-  <section id="menu-hero">
-    <div class="hero-content">
-      <h1>Our Menu</h1>
-      <p>Fresh from the ocean, crafted with care.</p>
+  <!-- MENU HERO — VIDEO BACKGROUND -->
+  <section id="menu-hero-dark">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="../assets/vid1.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-video-overlay"></div>
+
+    <div class="menu-hero-content">
+      <div class="menu-hero-text">
+        <span class="menu-hero-label">Aquarius Beach, Watamu</span>
+        <h1>Taste the Best<br/>Seafood on the Coast</h1>
+        <p>Every dish tells a story of the Indian Ocean — fresh, bold and unforgettable.</p>
+        <a href="#chefs-specials" class="btn btn-light">Explore the Menu</a>
+      </div>
     </div>
   </section>
 
@@ -102,6 +111,22 @@
         <div class="menu-card">
           <h3>Grilled Chicken Platter</h3>
           <p>Herb marinated chicken with roasted vegetables, couscous and harissa yoghurt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO BREAK SECTION -->
+  <section id="menu-video-break">
+    <div class="video-break-inner">
+      <video autoplay muted loop playsinline class="break-video">
+        <source src="../assets/video2.mp4" type="video/mp4" />
+      </video>
+      <div class="video-break-overlay">
+        <div class="video-break-content">
+          <span class="menu-hero-label">The Kitchen</span>
+          <h2>Crafted With Passion,<br/>Served With Pride</h2>
+          <p>Watch our chefs bring the ocean to your plate — every day, from sunrise to sunset.</p>
         </div>
       </div>
     </div>
