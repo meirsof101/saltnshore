@@ -229,12 +229,12 @@
   background-repeat: no-repeat;
   position: relative;
 }
-  #hero { background-image: url('../assets/salt10.jpeg'); }
+  #hero { background-image: url('/assets/salt10.jpeg'); }
   #menu-hero { background-image: url('/assets/entrance.jpeg'); }
-  #story-hero { background-image: url('../assets/entrance.jpeg'); }
-  #contact-hero { background-image: url('../assets/saltnshore.jpeg'); }
-  #events-hero { background-image: url('../assets/salt6.jpeg'); }
-  #gallery-hero { background-image: url('../assets/salt12.jpeg'); }
+  #story-hero { background-image: url('/assets/entrance.jpeg'); }
+  #contact-hero { background-image: url('/assets/saltnshore.jpeg'); }
+  #events-hero { background-image: url('/assets/salt6.jpeg'); }
+  #gallery-hero { background-image: url('/assets/salt12.jpeg'); }
 /* dark overlay so text is readable */
 #hero::before,
 #menu-hero::before,
