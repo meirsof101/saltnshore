@@ -234,7 +234,6 @@
   #story-hero { background-image: url('/assets/entrance.jpeg'); }
   #contact-hero { background-image: url('/assets/saltnshore.jpeg'); }
   #events-hero { background-image: url('/assets/salt6.jpeg'); }
-  #gallery-hero { background-image: url('/assets/salt12.jpeg'); }
 /* dark overlay so text is readable */
 #hero::before,
 #menu-hero::before,
@@ -1481,7 +1480,7 @@
    GALLERY PAGE
    ============================================ */
 #gallery-hero {
-    min-height: 50vh;
+    min-height: 60vh;
   }
   
   #gallery-section {
@@ -1525,7 +1524,6 @@
   .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius-lg);
     aspect-ratio: 1 / 1;
     background-color: var(--sand);
   }
